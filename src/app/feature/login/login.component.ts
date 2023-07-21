@@ -20,7 +20,9 @@ export class LoginComponent {
     }
 
     const { username, password } = form.value;
-  
+    console.log(form.value)
+    const token = this.userService.login({username, password});
+    console.log(token)
   }
 
 } 
